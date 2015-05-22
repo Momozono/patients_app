@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522043229) do
+ActiveRecord::Schema.define(version: 20150522053649) do
 
   create_table "diseases", force: true do |t|
     t.integer  "user_id"
     t.boolean  "depression"
     t.boolean  "schizophrenia"
     t.boolean  "social_anxiety_disorder"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "microposts", force: true do |t|
+    t.integer  "user_id"
+    t.string   "content"
+    t.integer  "pain_scale"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

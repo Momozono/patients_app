@@ -1,4 +1,6 @@
 PatientsApp::Application.routes.draw do
+  resources :microposts
+
   resources :diseases
 
   resources :users
