@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @disease.user_id %>
+</p>
+
+<p>
+  <strong>Depression:</strong>
+  <%= @disease.depression %>
+</p>
+
+<p>
+  <strong>Schizophrenia:</strong>
+  <%= @disease.schizophrenia %>
+</p>
+
+<p>
+  <strong>Social anxiety disorder:</strong>
+  <%= @disease.social_anxiety_disorder %>
+</p>
+
+<%= link_to 'Edit', edit_disease_path(@disease) %> |
+<%= link_to 'Back', diseases_path %>

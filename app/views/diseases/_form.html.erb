@@ -1,0 +1,33 @@
+<%= form_for(@disease) do |f| %>
+  <% if @disease.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@disease.errors.count, "error") %> prohibited this disease from being saved:</h2>
+
+      <ul>
+      <% @disease.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :depression %><br>
+    <%= f.check_box :depression %>
+  </div>
+  <div class="field">
+    <%= f.label :schizophrenia %><br>
+    <%= f.check_box :schizophrenia %>
+  </div>
+  <div class="field">
+    <%= f.label :social_anxiety_disorder %><br>
+    <%= f.check_box :social_anxiety_disorder %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
